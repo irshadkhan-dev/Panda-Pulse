@@ -1,5 +1,6 @@
+import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import { Button } from "@/components/ui/button";
-import MaxWidthWrapper from "components/MaxWidthWrapper";
+
 import { Check } from "lucide-react";
 
 const PricePage = () => {

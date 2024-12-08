@@ -13,7 +13,7 @@ const SideBarFooter = async () => {
         width={30}
         height={30}
         alt="profile image"
-        src={user!.image}
+        src={`${user?.image || ""}`}
         className="rounded-full"
       />
       <span className="flex flex-col text-xs">

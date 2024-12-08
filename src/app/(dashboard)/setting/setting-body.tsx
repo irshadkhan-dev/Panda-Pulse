@@ -36,17 +36,9 @@ const SettingBody = () => {
   });
 
   const onSubmit = (data: z.infer<typeof FormSchema>) => {
-    localStorage.setItem("discordId", data.discordId);
     mutate(data.discordId);
   };
 
-  const savedDiscordId = localStorage.getItem("discordId");
-
-  useEffect(() => {
-    if (savedDiscordId) {
-      form.setValue("discordId", savedDiscordId);
-    }
-  }, [savedDiscordId, form]);
   if (isError) console.log("error");
 
   return (
@@ -61,11 +53,7 @@ const SettingBody = () => {
                 <FormItem>
                   <FormLabel>Discord ID</FormLabel>
                   <FormControl>
-                    <Input
-                      {...field}
-                      placeholder="Discord id"
-                      defaultValue={savedDiscordId!}
-                    />
+                    <Input {...field} placeholder="Discord id" />
                   </FormControl>
                   {fieldState.error && (
                     <FormMessage>{fieldState.error.message}</FormMessage>
