@@ -19,12 +19,15 @@ const EmptyEventPage = () => {
         <div className="w-full h-px bg-gray-200" />
         <div className="w-full bg-white/5 backdrop-blur-lg transition-all z-[100] flex items-center justify-center h-[70vh] p-4 border border-gray-200 rounded-lg">
           <div className="flex flex-col gap-5 items-center">
-            <div className="flex flex-col">
+            <div className="flex flex-col gap-1">
               <span className="text-2xl font-semibold text-center">
                 Create your first sale event
               </span>
               <span className="text-sm text-gray-500 text-center">
                 Get started by sending a request to our Tracking API
+              </span>
+              <span className="text-sm text-gray-500 text-center">
+                {"https://server.irshadkhan98031.workers.dev/api/v1/events"}
               </span>
             </div>
 
